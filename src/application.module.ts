@@ -1,15 +1,28 @@
 import { HapinessModule, HttpServerService, OnError, OnStart } from '@hapiness/core';
 import { LoggerModule, LoggerService } from '@hapiness/logger';
 import { Observable } from 'rxjs';
+import {MongoClientService, MongoModule} from '@hapiness/mongo';
+import {SwagModule} from '@hapiness/swag';
+import {Config} from '@hapiness/config';
+import {TravelModel} from './models/travels';
+import { TravelsDocumentService, TravelsService} from './services';
+
+const travelsDocumentServiceFactory = (mongoClientService: MongoClientService) => new TravelsDocumentService(mongoClientService);
 
 @HapinessModule({
     version: '1.0.0',
     imports: [
-        LoggerModule
+        LoggerModule,
+        SwagModule.setConfig(Config.get('swag')),
+        MongoModule
     ],
-    declarations: [],
+    declarations: [
+        TravelModel
+    ],
     providers: [
-        HttpServerService
+        HttpServerService,
+        TravelsService,
+        { provide: TravelsDocumentService, useFactory: travelsDocumentServiceFactory, deps: [ MongoClientService ]}
     ]
 })
 export class ApplicationModule implements OnStart, OnError {
