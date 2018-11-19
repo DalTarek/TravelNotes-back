@@ -4,8 +4,7 @@ server:
   options:
     connections:
       routes:
-        cors:
-          origin: ['http://localhost:4200']
+        cors: true
 swag:
   info:
     title: New Web's Technologies course with Hapiness
