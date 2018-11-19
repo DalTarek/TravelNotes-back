@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/models/travels/index.ts"],"names":[],"mappings":";;;;;AAAA,oCAA+B","sourcesContent":["export * from './travel.model';\n"]}
