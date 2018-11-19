@@ -8,7 +8,7 @@ export const TRAVEL_PAYLOAD = Joi.object().keys({
     arrival: Joi.date().timestamp().raw().required(),
     country: Joi.string().required(),
     city: Joi.string().required(),
-    numberPerson: Joi.string().required(),
+    numberPerson: Joi.number().required(),
     hotel: Joi.string(),
     price: Joi.string().required(),
     description: Joi.string()

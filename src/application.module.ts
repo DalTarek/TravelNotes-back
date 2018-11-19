@@ -6,10 +6,10 @@ import {SwagModule} from '@hapiness/swag';
 import {Config} from '@hapiness/config';
 import {TravelModel} from './models/travels';
 import { TravelsDocumentService, TravelsService} from './services';
-import {GetAllTravelsRoute, GetOneTravelRoute} from './routes/travels/get';
-import {PostCreateTravelRoute} from './routes/travels/post';
-import {PutUpdateTravelRoute} from './routes/travels/put';
-import {DeleteOneTravelRoute} from './routes/travels/delete';
+import {GetAllTravelsRoute, GetOneTravelRoute} from './routes';
+import {PostCreateTravelRoute} from './routes';
+import {PutUpdateTravelRoute} from './routes';
+import {DeleteOneTravelRoute} from './routes';
 
 const travelsDocumentServiceFactory = (mongoClientService: MongoClientService) => new TravelsDocumentService(mongoClientService);
 

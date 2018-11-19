@@ -2,7 +2,7 @@ import {Model, MongoClientService, MongoModel} from '@hapiness/mongo';
 
 @MongoModel({
     adapter: 'mongoose',
-    collection: 'person'
+    collection: 'travel'
 })
 export class TravelModel extends Model {
     readonly schema: any;
@@ -10,7 +10,6 @@ export class TravelModel extends Model {
     constructor(private _mongoClientService: MongoClientService) {
         // call parent constructor
         super(TravelModel);
-
         // get dao
         const dao = this._mongoClientService.getDao(this.connectionOptions);
 
@@ -39,9 +38,8 @@ export class TravelModel extends Model {
                 trim: true
             },
             numberPerson: {
-                type: String,
-                required: true,
-                trim: true
+                type: Number,
+                required: true
             },
             hotel: {
                 type: String,
