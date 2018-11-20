@@ -7,7 +7,7 @@ import {tap} from 'rxjs/operators';
 import {ID_PARAMETER, TRAVEL_RESPONSE} from '../../../schemas';
 
 @Route({
-    path: '/api/travels/{id}',
+    path: '/api/travel/{id}',
     method: 'GET',
     config: {
          validate: {
