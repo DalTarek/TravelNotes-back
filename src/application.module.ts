@@ -7,6 +7,7 @@ import {Config} from '@hapiness/config';
 import {TravelModel} from './models/travels';
 import { TravelsDocumentService, TravelsService} from './services';
 import {GetAllTravelsRoute, GetOneTravelRoute} from './routes';
+import {GetRandomTravelRoute} from './routes';
 import {PostCreateTravelRoute} from './routes';
 import {PutUpdateTravelRoute} from './routes';
 import {DeleteOneTravelRoute} from './routes';
@@ -24,6 +25,7 @@ const travelsDocumentServiceFactory = (mongoClientService: MongoClientService) =
         GetAllTravelsRoute,
         GetOneTravelRoute,
         PostCreateTravelRoute,
+        GetRandomTravelRoute,
         PutUpdateTravelRoute,
         DeleteOneTravelRoute,
         TravelModel

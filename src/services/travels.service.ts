@@ -17,6 +17,18 @@ export class TravelsService {
         return this._travelsDocumentService.find();
     }
 
+    /**
+     * Returns randomly one people of the list
+     *
+     * @returns {Observable<Person | void>}
+     */
+    random(): Observable<Travel | void> {
+        return this.listAll()
+            .pipe(
+                map(_ => (!!_ && _.length > 0) ? _[ Math.round(Math.random() * _.length) ] : undefined)
+            );
+    }
+
     one(id: string): Observable<Travel> {
         return this._travelsDocumentService.findById(id)
             .pipe(
