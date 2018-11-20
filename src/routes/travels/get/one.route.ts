@@ -10,12 +10,12 @@ import {ID_PARAMETER, TRAVEL_RESPONSE} from '../../../schemas';
     path: '/api/travels/{id}',
     method: 'GET',
     config: {
-        validate: {
+         validate: {
             params: {
                 id: ID_PARAMETER
-            }
-        },
-        response: {
+             }
+         },
+         response: {
             status: {
                 200: TRAVEL_RESPONSE
             }

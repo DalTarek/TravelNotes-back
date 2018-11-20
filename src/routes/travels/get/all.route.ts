@@ -10,11 +10,11 @@ import {TRAVELS_RESPONSE} from '../../../schemas';
     path: '/api/travels',
     method: 'GET',
     config: {
-        response: {
+         response: {
             status: {
                 200: TRAVELS_RESPONSE
             }
-        },
+         },
         description: 'Get all travels',
         notes: 'Returns an array of travels or 204',
         tags: [ 'api', 'travels' ]

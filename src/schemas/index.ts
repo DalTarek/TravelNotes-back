@@ -1,6 +1,6 @@
 import * as Joi from 'joi';
 
-export const ID_PARAMETER = Joi.string().required();
+export const ID_PARAMETER = Joi.required();
 
 export const TRAVEL_PAYLOAD = Joi.object().keys({
     photo: Joi.string(),
@@ -15,7 +15,7 @@ export const TRAVEL_PAYLOAD = Joi.object().keys({
 });
 
 export const TRAVEL_RESPONSE = Joi.object().keys({
-    id: ID_PARAMETER,
+    _id: ID_PARAMETER,
     photo: Joi.reach(TRAVEL_PAYLOAD, 'photo'),
     departure: Joi.reach(TRAVEL_PAYLOAD, 'departure'),
     arrival: Joi.reach(TRAVEL_PAYLOAD, 'arrival'),
