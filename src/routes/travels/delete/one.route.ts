@@ -30,6 +30,6 @@ export class DeleteOneTravelRoute implements OnDelete {
      * @param request
      */
     onDelete(request: Request): Observable<void> {
-        return this._travelsService.delete(request.params._id);
+        return this._travelsService.delete(request.params.id);
     }
 }
