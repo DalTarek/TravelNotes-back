@@ -29,4 +29,4 @@ export const TRAVEL_RESPONSE = Joi.object().keys({
 
 export const TRAVELS_RESPONSE = Joi.array().items(
     TRAVEL_RESPONSE
-).unique().min(1).options({ stripUnknown: true });
+).unique().min(1);
