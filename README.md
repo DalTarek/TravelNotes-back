@@ -19,3 +19,5 @@ Etape 4
 
 Etape 5
     Aller sur http://localhost:4200 pour profiter de l'application.
+
+(Aller sur http://localhost:4443/documentation pour avoir l'api du back)
