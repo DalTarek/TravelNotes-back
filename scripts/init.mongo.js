@@ -6,7 +6,7 @@
 // Insert people array
 db.getCollection('travels').insertMany([
     {
-        "photo": "https://randomuser.me/portraits/women/59.jpg",
+        "photo": "http://www.coastalfamilyhealth.com.au/wp-content/uploads/2018/04/coastal-family-health-travel-clinic.jpg",
         "departure": ISODate("1974-01-01T23:00:00.000Z"),
         "arrival": ISODate("1974-01-01T23:00:00.000Z"),
         "country": "Espagne",
@@ -17,7 +17,7 @@ db.getCollection('travels').insertMany([
         "description": "Voyage scolaire année de première"
     },
     {
-        "photo": "https://randomuser.me/portraits/women/59.jpg",
+        "photo": "http://www.coastalfamilyhealth.com.au/wp-content/uploads/2018/04/coastal-family-health-travel-clinic.jpg",
         "departure": ISODate("1974-01-01T23:00:00.000Z"),
         "arrival": ISODate("1974-01-01T23:00:00.000Z"),
         "country": "Norvège",
@@ -28,7 +28,7 @@ db.getCollection('travels').insertMany([
         "description": "Voyage chez ma soeur année 2016"
     },
     {
-        "photo": "https://randomuser.me/portraits/women/59.jpg",
+        "photo": "http://www.coastalfamilyhealth.com.au/wp-content/uploads/2018/04/coastal-family-health-travel-clinic.jpg",
         "departure": ISODate("1974-01-01T23:00:00.000Z"),
         "arrival": ISODate("1974-01-01T23:00:00.000Z"),
         "country": "Florence",
