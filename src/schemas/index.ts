@@ -4,15 +4,15 @@ export const ID_PARAMETER = Joi.required();
 
 export const TRAVEL_PAYLOAD = Joi.object().keys({
     photo: Joi.string(),
-    departure: Joi.date().timestamp().raw().required(),
-    arrival: Joi.date().timestamp().raw().required(),
+    departure: Joi.date().raw().required(),
+    arrival: Joi.date().raw().required(),
     country: Joi.string().required(),
     city: Joi.string().required(),
     numberPerson: Joi.number().required(),
     hotel: Joi.string(),
     price: Joi.string().required(),
     description: Joi.string()
-});
+}).options({ stripUnknown: true });
 
 export const TRAVEL_RESPONSE = Joi.object().keys({
     _id: ID_PARAMETER,
@@ -29,4 +29,4 @@ export const TRAVEL_RESPONSE = Joi.object().keys({
 
 export const TRAVELS_RESPONSE = Joi.array().items(
     TRAVEL_RESPONSE
-).unique().min(1);
+).unique().min(1).options({ stripUnknown: true });

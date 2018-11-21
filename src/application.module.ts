@@ -64,6 +64,7 @@ export class ApplicationModule implements OnStart, OnError {
      * @return {void | Observable<any>}
      */
     onError(error: Error, data?: any): void | Observable<any> {
-        this._logger.error('A problem occurred during application\'s lifecycle');
+        this._logger.error('A problem occurred during application\'s lifecycle. Error name ' + error.name + ' Error ' + error.message
+            + error.stack) ;
     }
 }

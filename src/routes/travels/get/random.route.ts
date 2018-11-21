@@ -17,7 +17,7 @@ import { TravelsService } from '../../../services';
         },
         description: 'Get one person randomly',
         notes: 'Returns one person randomly or 204',
-        tags: [ 'api', 'people' ]
+        tags: [ 'api', 'travel' ]
     }
 })
 export class GetRandomTravelRoute implements OnGet {

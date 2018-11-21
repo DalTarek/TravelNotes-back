@@ -4,7 +4,7 @@ import {Observable} from 'rxjs';
 import {ID_PARAMETER} from '../../../schemas';
 
 @Route({
-    path: '/api/travels/{id}',
+    path: '/api/travel/{id}',
     method: 'DELETE',
     config: {
         validate: {
@@ -14,7 +14,7 @@ import {ID_PARAMETER} from '../../../schemas';
         },
         description: 'Delete one travel',
         notes: 'Delete one travel for the given id in path parameter',
-        tags: [ 'api', 'travels']
+        tags: [ 'api', 'travel']
     }
 })
 export class DeleteOneTravelRoute implements OnDelete {
@@ -30,6 +30,6 @@ export class DeleteOneTravelRoute implements OnDelete {
      * @param request
      */
     onDelete(request: Request): Observable<void> {
-        return this._travelsService.delete(request.params.id);
+        return this._travelsService.delete(request.params._id);
     }
 }

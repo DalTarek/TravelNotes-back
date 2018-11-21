@@ -22,7 +22,7 @@ import {ID_PARAMETER, TRAVEL_RESPONSE} from '../../../schemas';
         },
         description: 'Get one travel',
         notes: 'Returns one travel for the given id in path parameter',
-        tags: [ 'api', 'travels' ]
+        tags: [ 'api', 'travel' ]
     }
 })
 export class GetOneTravelRoute implements OnGet {

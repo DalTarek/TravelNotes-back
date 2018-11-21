@@ -7,7 +7,7 @@ import {tap} from 'rxjs/operators';
 import {ID_PARAMETER, TRAVEL_PAYLOAD, TRAVEL_RESPONSE} from '../../../schemas';
 
 @Route({
-    path: '/api/travels/{id}',
+    path: '/api/travel/{id}',
     method: 'PUT',
     config: {
         validate: {
@@ -28,7 +28,7 @@ import {ID_PARAMETER, TRAVEL_PAYLOAD, TRAVEL_RESPONSE} from '../../../schemas';
         },
         description: 'Update one travel',
         notes: 'Update the travel for the given id in path parameter and returns it',
-        tags: [ 'api', 'travels' ]
+        tags: [ 'api', 'travel' ]
     }
 })
 export class PutUpdateTravelRoute implements OnPut {
